@@ -91,8 +91,7 @@ public class TheaterReservations {
                     "%d tickets reserved for %s under the name %s, %s%n",
                     ticketCount, reservationDate, fullNameParts[1], fullNameParts[0]);
         }
-        //TODO - Make their reservation given their input
-
+        
         //TODO - Display a confirmation message to the user in this format:
         // ticket(s) reserved for (date) under (LastName, FirstName)
         // if # of tickets is 1, don't display their confirmation with an s at the end of ticket
