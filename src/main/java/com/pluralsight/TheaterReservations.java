@@ -79,6 +79,10 @@ public class TheaterReservations {
             return;
         }
 
+        //TODO - Display a confirmation message to the user in this format:
+        // ticket(s) reserved for (date) under (LastName, FirstName)
+        // if # of tickets is 1, don't display their confirmation with an s at the end of ticket
+
         // * if statement to check if ticketCount equates to one
         if (ticketCount == 1) {
             //Print confirmation for one ticket
@@ -91,11 +95,8 @@ public class TheaterReservations {
                     "%d tickets reserved for %s under the name %s, %s%n",
                     ticketCount, reservationDate, fullNameParts[1], fullNameParts[0]);
         }
-        
-        //TODO - Display a confirmation message to the user in this format:
-        // ticket(s) reserved for (date) under (LastName, FirstName)
-        // if # of tickets is 1, don't display their confirmation with an s at the end of ticket
 
+        sc.close();
     } // ! main method cBracket
 
 } // ! main class cBracket
