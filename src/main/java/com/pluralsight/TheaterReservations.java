@@ -53,8 +53,10 @@ public class TheaterReservations {
         // * LocalDate.parse() Attempts to convert text into a real Java date. reservationDate is the user's
         // * original date input that we stored as a String variable. The formatter tells Java how to read
         // * the date's format, such as MM/dd/uuuu.
+
+        LocalDate parsedDate;
         try {
-            LocalDate parsedDate = LocalDate.parse(reservationDate, formatter);
+            parsedDate = LocalDate.parse(reservationDate, formatter);
         } catch  (DateTimeParseException e) {
             System.out.println("Please enter a valid date in the format MM/dd/yyyy (e.g. 01/25/2027)");
             return;
@@ -88,12 +90,12 @@ public class TheaterReservations {
             //Print confirmation for one ticket
             System.out.printf(
                     "%d ticket reserved for %s under the name %s, %s%n",
-                    ticketCount, reservationDate, fullNameParts[1], fullNameParts[0]);
+                    ticketCount, parsedDate, fullNameParts[1], fullNameParts[0]);
         } else {
             //Print confirmation for multiple tickets
             System.out.printf(
                     "%d tickets reserved for %s under the name %s, %s%n",
-                    ticketCount, reservationDate, fullNameParts[1], fullNameParts[0]);
+                    ticketCount, parsedDate, fullNameParts[1], fullNameParts[0]);
         }
 
         sc.close();
